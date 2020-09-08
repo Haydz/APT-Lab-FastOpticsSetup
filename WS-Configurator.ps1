@@ -2,9 +2,8 @@ cd \\dc01\labs\sysmon\
 ./sysmon64.exe -accepteula -i sysmonconfig.xml
 Get-WinEvent -LogName Microsoft-Windows-Sysmon/Operational
 #add full auditpol.exe
-auditpol.exe /set /category:* /sucess:enable
+auditpol.exe /set /category:* /success:enable
 auditpol.exe /set /category:* /failure:enable
-Set-Itemproperty -path "HKLM:\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging" -Value 1
 #Enable PowerShell ScriptBlock logging & Module Logging
 #Add PowerShell folder for policies   
 New-Item –Path  "HKLM:\SOFTWARE\Policies\Microsoft\Windows" -Name "PowerShell"

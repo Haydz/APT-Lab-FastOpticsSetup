@@ -48,7 +48,7 @@ Wevtutil gl WEC3-PRINT
 foreach ($subscription in (wevtutil el | select-string -pattern "WEC")) {wevtutil sl $subscription /ms:4194304}
 Wevtutil gl WEC3-PRINT
 #add full auditpol.exe
-auditpol.exe /set /category:* /sucess:enable
+auditpol.exe /set /category:* /sucessess:enable
 auditpol.exe /set /category:* /failure:enable
 #Enable PowerShell ScriptBlock logging & Module Logging
 #Add PowerShell folder for policies   
